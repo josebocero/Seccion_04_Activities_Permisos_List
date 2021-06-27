@@ -13,12 +13,12 @@ class MainActivity : AppCompatActivity() {
 
 //        Toast.makeText(this,"Hello from the Toast",Toast.LENGTH_LONG).show()
 
-        val layout = findViewById<ConstraintLayout>(R.id.constraint)
+        //val layout = findViewById<ConstraintLayout>(R.id.constraint)
 
 //        Snackbar.make(layout,"Hello from the SnackBar!",Snackbar.LENGTH_LONG).show()
 
-        Snackbar.make(layout,"Hello from the SnackBar!",Snackbar.LENGTH_LONG).setAction("UNDO") {
-            Snackbar.make(layout,"Email has been restored", Snackbar.LENGTH_LONG).show()
-        }.show()
+        //Snackbar.make(layout,"Hello from the SnackBar!",Snackbar.LENGTH_LONG).setAction("UNDO") {
+        //    Snackbar.make(layout,"Email has been restored", Snackbar.LENGTH_LONG).show()
+        //}.show()
     }
 }

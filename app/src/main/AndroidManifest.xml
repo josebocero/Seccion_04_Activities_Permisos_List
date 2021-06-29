@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Seccion_04_Activities_Permisos_List">
-        <activity android:name=".activities.LifeCycleEventsActivity"></activity>
+        <activity android:name=".activities.IntentExtrasActivity"></activity>
+        <activity android:name=".activities.LifeCycleEventsActivity" />
         <activity android:name=".activities.SharedPreferencesActivity" />
         <activity android:name=".activities.PicassoActivity" />
         <activity android:name=".activities.PermissionsActivity" />

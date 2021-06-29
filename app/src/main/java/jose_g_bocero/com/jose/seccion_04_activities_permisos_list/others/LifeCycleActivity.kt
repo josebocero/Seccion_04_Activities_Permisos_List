@@ -1,11 +1,11 @@
-package jose_g_bocero.com.jose.seccion_04_activities_permisos_list.activities
+package jose_g_bocero.com.jose.seccion_04_activities_permisos_list.others
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.R
+import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.activities.LifeCycleEventsActivity
 
 class LifeCycleActivity : LifeCycleEventsActivity() {
 

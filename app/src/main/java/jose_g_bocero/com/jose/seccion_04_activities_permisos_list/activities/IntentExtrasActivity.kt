@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.Toolbar
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.R
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.databinding.ActivityIntentExtrasBinding
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.models.Student
+import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.others.ToolbarActivity
 
-class IntentExtrasActivity : AppCompatActivity() {
+class IntentExtrasActivity : ToolbarActivity() {
 
     private lateinit var binding: ActivityIntentExtrasBinding
 
@@ -17,6 +19,10 @@ class IntentExtrasActivity : AppCompatActivity() {
 
         binding = ActivityIntentExtrasBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val tB = findViewById<Toolbar>(R.id.toolbar)
+        toolbarToLoad(tB as Toolbar)
+        enableHomeDisplay(true)
 
         binding.buttonBack.setOnClickListener {
             startActivity(

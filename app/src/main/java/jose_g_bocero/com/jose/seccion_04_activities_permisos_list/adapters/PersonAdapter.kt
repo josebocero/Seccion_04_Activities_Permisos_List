@@ -43,7 +43,7 @@ class PersonAdapter(val context: Context,val layout: Int, val list: List<Person>
 
         val fullName ="${list[position].firstName}, ${list[position].lastName}"
         vh.fullName.text = fullName
-        vh.age.text = "list[position].age"
+        vh.age.text = "${list[position].age}"
 
         return view
     }

@@ -10,12 +10,13 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.snackbar.Snackbar
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.activities.*
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.databinding.ActivityMainBinding
+import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.databinding.ToolbarBinding
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.others.LifeCycleActivity
 import jose_g_bocero.com.jose.seccion_04_activities_permisos_list.others.ToolbarActivity
 
 class MainActivity : ToolbarActivity() {
 
-    protected lateinit var binding : ActivityMainBinding
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,10 +24,12 @@ class MainActivity : ToolbarActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val bindingToolbar: ToolbarBinding = ToolbarBinding.inflate(layoutInflater)
+        //bindingToolbar.widgetToolbar
+
         // No funciona a través de ViewBinding
         val tB = findViewById<Toolbar>(R.id.toolbar)
         toolbarToLoad(tB as Toolbar)
-
 
         val btnLifeCycle = findViewById<Button>(R.id.button_to_cycle)
         val btnClickEvents = findViewById<Button>(R.id.button_to_click)

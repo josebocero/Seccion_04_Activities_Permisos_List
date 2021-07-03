@@ -26,7 +26,21 @@ class PermissionsActivity : AppCompatActivity() {
         binding = ActivityPermissionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.buttonPicture.setOnClickListener { getPictureFromCameraAskingPermissions() }
+        //binding.buttonPicture.setOnClickListener { getPictureFromCamera() }
+    }
+
+    private fun getPictureFromCamera() {
+        // Asegurarnos de que no hay permiso de camara en el manifest
+        // Crear inten para capturar la foto
+        val pictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        // Comprobar que podemos manejar la captura de fotos (Tenemos camara y app de camara)
+        if(pictureIntent.resolveActivity(packageManager) != null) {
+            startActivityForResult(pictureIntent, requestCameraPicture)
+        }else {
+            // No hay activity que pueda manejar el intent (por ejemplo sin cámara)
+        }
     }
 
     private fun getPictureFromCameraAskingPermissions() {
